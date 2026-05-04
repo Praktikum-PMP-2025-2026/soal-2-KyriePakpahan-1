@@ -95,7 +95,7 @@ NodeList* merge_sorted_lists(NodeList *list1, NodeList *list2) {
         }
     }
 
-    // Attach the remaining nodes
+    // jika masih ada sisa node di salah satu list, tambahkan ke akhir merged list
     if (list1 != NULL) {
         merged_tail->next = list1;
     } else if (list2 != NULL) {
@@ -155,6 +155,10 @@ int main (){
     merged_list = merge_sorted_lists(list1, list2);
     print_list(merged_list);
 
-
     return 0;
 }
+
+/*
+Referensi 
+https://leetcode.com/problems/merge-two-sorted-lists/solutions/
+*/
